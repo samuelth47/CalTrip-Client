@@ -1,9 +1,9 @@
 // kk58 09/29/21
 
 import * as React from 'react';
-import { Button, View, Text } from 'react-native';
+import { Image, StyleSheet, Button, View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack'; 
 
 function HomeScreen({ navigation }) {
   return (
@@ -94,6 +94,21 @@ function Jan_month({ route, navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'moz-left', justifyContent: 'moz-left' }}>
       <Text>January Activities</Text>
+      <Button title="Skiing Trip" onPress={() => navigation.navigate('Skiing Trip')} />
+      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+      <Button title="Go back" onPress={() => navigation.goBack()} />
+    </View>
+  );
+}
+
+function ski_trip({ route, navigation }) {
+  return (
+    // <View style={{ flex: 1, alignItems: 'moz-left', justifyContent: 'moz-left'}}>
+    <View style={styles.container}>
+      <Image source={{ uri: 'https://i.imgur.com/uRdQKnz.jpeg' }} style={styles.act_pic} />
+      <Text>Title</Text>
+      <Text>Date</Text>
+      <Text>Description here</Text>
       <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
       <Button title="Go back" onPress={() => navigation.goBack()} />
     </View>
@@ -243,6 +258,7 @@ function App() {
       <Stack.Screen name="Monthly Activities" component={MonthsScreen} />
       <Stack.Screen name="Listed Activities" component={ActivitiesScreen} />
       <Stack.Screen name="January Activities" component={Jan_month} />
+      <Stack.Screen name="Skiing Trip" component={ski_trip} />
       <Stack.Screen name="February Activities" component={Feb_month} />
       <Stack.Screen name="March Activities" component={Mar_month} />
       <Stack.Screen name="April Activities" component={Apr_month} />
@@ -258,5 +274,21 @@ function App() {
     </NavigationContainer>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  act_pic: {
+    // position: 'absolute',
+    width: '100%', 
+    height: 250,
+    // margin: 'auto',
+    alignItems: 'start',
+  },
+});
 
 export default App;
