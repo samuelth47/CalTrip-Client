@@ -20,6 +20,14 @@ function HomeScreen({ navigation }) {
         }}
       />
 
+      <Button style={{ flex: 1, alignItems: 'moz-right', justifyContent: 'moz-right' }}
+        title="MyAccount"
+        onPress={() => {
+          /* 1. Navigate to the My Account route with params */
+          navigation.navigate('Account');
+        }}
+      />
+
       {/* <Button
         title="Listed Activities"
         onPress={() => { */}
@@ -66,6 +74,18 @@ function MonthsScreen({ route, navigation }) {
 
       <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
       {/* <Button title="Go back" onPress={() => navigation.goBack()} /> */}
+    </View>
+  );
+}
+
+function account_page({ route, navigation }) {
+  /* 2. Get the param */
+  const { itemId, otherParam } = route.params;
+  return (
+    <View style={{ flex: 1, alignItems: 'moz-left', justifyContent: 'moz-left' }}>
+      <Button title="Profile" onPress={() => navigation.navigate('January Activities')} />
+      <Button title="History" onPress={() => navigation.navigate('February Activities')} />
+      <Button title="Help" onPress={() => navigation.navigate('March Activities')} />
     </View>
   );
 }
