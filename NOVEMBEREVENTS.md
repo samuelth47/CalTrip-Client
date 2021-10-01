@@ -18,7 +18,7 @@ Here are five activities to do in the month of November
 3. Grand Rapids Comic-con
    Date: Friday, November 12, 2021 thru Sunday November 14, 2021
    Time: 8 AM - 10 PM
-   Description: Comic-con packs Devos place with celebrity guests, cosplaying, and a huge vending hall and more!
+   Description: Comic-con packs Devos place with celebrity guests, cosplaying, and a huge vending hall and more. There is going to be a larger community than ever for this engaging event that is returning for the first time since 2019.
 
    
 
