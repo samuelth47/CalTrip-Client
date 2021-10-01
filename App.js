@@ -1,47 +1,9 @@
-// kk58 09/29/21
-
 import * as React from 'react';
 import { Image, StyleSheet, Button, View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack'; 
-
-function HomeScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
-      <Button
-        title="Monthly Activities"
-        onPress={() => {
-          /* 1. Navigate to the Details route with params */
-          navigation.navigate('Monthly Activities', {
-            itemId: 86,
-            otherParam: 'input anything here',
-          });
-        }}
-      />
-
-      <Button style={{ flex: 1, alignItems: 'moz-right', justifyContent: 'moz-right' }}
-        title="MyAccount"
-        onPress={() => {
-          /* 1. Navigate to the My Account route with params */
-          navigation.navigate('Account');
-        }}
-      />
-
-      {/* <Button
-        title="Listed Activities"
-        onPress={() => { */}
-        {/* /* 1. Navigate to the Details route with params */}
-            {/* navigation.navigate('Listed Activities', {
-            itemId: 86,
-            otherParam: 'input anything here',
-          });
-        }}
-      /> */}
-
-    </View>
-  );
-}
+import { globalStyles } from './styles/global';
+import HomeScreen from "./screens/home";
 
 function MonthsScreen({ route, navigation }) {
   /* 2. Get the param */
@@ -104,11 +66,13 @@ function Jan_month({ route, navigation }) {
 function ski_trip({ route, navigation }) {
   return (
     // <View style={{ flex: 1, alignItems: 'moz-left', justifyContent: 'moz-left'}}>
-    <View style={styles.container}>
-      <Image source={{ uri: 'https://i.imgur.com/uRdQKnz.jpeg' }} style={styles.act_pic} />
-      <Text>Title</Text>
-      <Text>Date</Text>
-      <Text>Description here</Text>
+    <View style={globalStyles.container}>
+      <Image source={{ uri: 'https://i.imgur.com/uRdQKnz.jpeg' }} style={globalStyles.act_pic} />
+      <Text style={globalStyles.eventTitle}>Title</Text>
+      <Text style={globalStyles.eventDate}>Date</Text>
+      <Text style={globalStyles.eventDescription}>Description here</Text>
+      {/* <Button title="Join a trip here" onPress={() => navigation/natigate('Join')} /> */}
+      {/* <Button title="Create a trip here" onPress={() => navigation.navigate('Create')}/> */}
       <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
       <Button title="Go back" onPress={() => navigation.goBack()} />
     </View>
@@ -249,7 +213,7 @@ function ActivitiesScreen({ route, navigation }) {
 
 const Stack = createNativeStackNavigator();
 
-function App() {
+export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
@@ -275,20 +239,4 @@ function App() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  act_pic: {
-    // position: 'absolute',
-    width: '100%', 
-    height: 250,
-    // margin: 'auto',
-    alignItems: 'start',
-  },
-});
-
-export default App;
+// export default App;
