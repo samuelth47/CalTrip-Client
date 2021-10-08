@@ -4,79 +4,30 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack'; 
 import { globalStyles } from './styles/global';
 import HomeScreen from "./screens/home";
+import MonthsScreen from "./screens/months";
+import account_page from "./screens/account";
+import Jan_month from "./screens/january"; 
 
-function MonthsScreen({ route, navigation }) {
-  /* 2. Get the param */
-  const { itemId, otherParam } = route.params;
+function ski_trip({ navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: 'moz-left', justifyContent: 'moz-left' }}>
-      {/* <Text>Monthly Activities</Text> */}
-      {/* <Text>itemId: {JSON.stringify(itemId)}</Text>
-      <Text>otherParam: {JSON.stringify(otherParam)}</Text> */}
-      {/* <Button
-        title="Go to Details... again"
-        onPress={() =>
-          navigation.push('Listed Activities', {
-            itemId: Math.floor(Math.random() * 100),
-          })
-        }
-      /> */}
-      <Button title="January" onPress={() => navigation.navigate('January Activities')} />
-      <Button title="February" onPress={() => navigation.navigate('February Activities')} />
-      <Button title="March" onPress={() => navigation.navigate('March Activities')} />
-      <Button title="April" onPress={() => navigation.navigate('April Activities')} />
-      <Button title="May" onPress={() => navigation.navigate('May Activities')} />
-      <Button title="June" onPress={() => navigation.navigate('June Activities')} />
-      <Button title="July" onPress={() => navigation.navigate('July Activities')} />
-      <Button title="August" onPress={() => navigation.navigate('August Activities')} />
-      <Button title="September" onPress={() => navigation.navigate('September Activities')} />
-      <Button title="October" onPress={() => navigation.navigate('October Activities')} />
-      <Button title="November" onPress={() => navigation.navigate('November Activities')} />
-      <Button title="December" onPress={() => navigation.navigate('December Activities')} />
-
-      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
-      {/* <Button title="Go back" onPress={() => navigation.goBack()} /> */}
-    </View>
-  );
-}
-
-function account_page({ route, navigation }) {
-  /* 2. Get the param */
-  const { itemId, otherParam } = route.params;
-  return (
-    <View style={{ flex: 1, alignItems: 'moz-left', justifyContent: 'moz-left' }}>
-      <Button title="Profile" onPress={() => navigation.navigate('January Activities')} />
-      <Button title="History" onPress={() => navigation.navigate('February Activities')} />
-      <Button title="Help" onPress={() => navigation.navigate('March Activities')} />
-    </View>
-  );
-}
-
-function Jan_month({ route, navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'moz-left', justifyContent: 'moz-left' }}>
-      <Text>January Activities</Text>
-      <Button title="Skiing Trip" onPress={() => navigation.navigate('Skiing Trip')} />
-      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
-      <Button title="Go back" onPress={() => navigation.goBack()} />
-    </View>
-  );
-}
-
-function ski_trip({ route, navigation }) {
-  return (
-    // <View style={{ flex: 1, alignItems: 'moz-left', justifyContent: 'moz-left'}}>
     <View style={globalStyles.container}>
       <Image source={{ uri: 'https://i.imgur.com/uRdQKnz.jpeg' }} style={globalStyles.act_pic} />
       <Text style={globalStyles.eventTitle}>Title</Text>
       <Text style={globalStyles.eventDate}>Date</Text>
       <Text style={globalStyles.eventDescription}>Description here</Text>
-      {/* <Button title="Join a trip here" onPress={() => navigation/natigate('Join')} /> */}
-      {/* <Button title="Create a trip here" onPress={() => navigation.navigate('Create')}/> */}
+      <Button title="Give a Ride" onPress={() => navigation.navigate('Give a Ride')} />
       <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
       <Button title="Go back" onPress={() => navigation.goBack()} />
     </View>
   );
+}
+
+function Ride() {
+  return (
+    <View style={globalStyles.eventDescription}>
+      <Text>ride options</Text>
+    </View>
+  )
 }
 
 function Feb_month({ route, navigation }) {
@@ -223,6 +174,7 @@ export default function App() {
       <Stack.Screen name="Listed Activities" component={ActivitiesScreen} />
       <Stack.Screen name="January Activities" component={Jan_month} />
       <Stack.Screen name="Skiing Trip" component={ski_trip} />
+      <Stack.Screen name="Give a Ride" component={Ride} />
       <Stack.Screen name="February Activities" component={Feb_month} />
       <Stack.Screen name="March Activities" component={Mar_month} />
       <Stack.Screen name="April Activities" component={Apr_month} />
