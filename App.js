@@ -5,8 +5,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { globalStyles } from './styles/global';
 import HomeScreen from "./screens/home";
 import MonthsScreen from "./screens/months";
-import account_page from "./screens/account";
 import Jan_month from "./screens/january"; 
+import Header from "./shared/header";
+import Account from './screens/account';
+import CreateEvent from './screens/create';
 
 function ski_trip({ navigation }) {
   return (
@@ -32,7 +34,7 @@ function Ride() {
 
 function Feb_month({ route, navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: 'moz-left', justifyContent: 'moz-left' }}>
+    <View style={globalStyles.default}>
       <Text>February Activities</Text>
       <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
       <Button title="Go back" onPress={() => navigation.goBack()} />
@@ -42,7 +44,7 @@ function Feb_month({ route, navigation }) {
 
 function Mar_month({ route, navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: 'moz-left', justifyContent: 'moz-left' }}>
+    <View style={globalStyles.default}>
       <Text>March Activities</Text>
       <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
       <Button title="Go back" onPress={() => navigation.goBack()} />
@@ -52,7 +54,7 @@ function Mar_month({ route, navigation }) {
 
 function Apr_month({ route, navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: 'moz-left', justifyContent: 'moz-left' }}>
+    <View style={globalStyles.default}>
       <Text>April Activities</Text>
       <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
       <Button title="Go back" onPress={() => navigation.goBack()} />
@@ -62,7 +64,7 @@ function Apr_month({ route, navigation }) {
 
 function May_month({ route, navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: 'moz-left', justifyContent: 'moz-left' }}>
+    <View style={globalStyles.default}>
       <Text>May Activities</Text>
       <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
       <Button title="Go back" onPress={() => navigation.goBack()} />
@@ -72,7 +74,7 @@ function May_month({ route, navigation }) {
 
 function Jun_month({ route, navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: 'moz-left', justifyContent: 'moz-left' }}>
+    <View style={globalStyles.default}>
       <Text>June Activities</Text>
       <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
       <Button title="Go back" onPress={() => navigation.goBack()} />
@@ -82,7 +84,7 @@ function Jun_month({ route, navigation }) {
 
 function Jul_month({ route, navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: 'moz-left', justifyContent: 'moz-left' }}>
+    <View style={globalStyles.default}>
       <Text>July Activities</Text>
       <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
       <Button title="Go back" onPress={() => navigation.goBack()} />
@@ -92,7 +94,7 @@ function Jul_month({ route, navigation }) {
 
 function Aug_month({ route, navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: 'moz-left', justifyContent: 'moz-left' }}>
+    <View style={globalStyles.default}>
       <Text>August Activities</Text>
       <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
       <Button title="Go back" onPress={() => navigation.goBack()} />
@@ -102,7 +104,7 @@ function Aug_month({ route, navigation }) {
 
 function Sep_month({ route, navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: 'moz-left', justifyContent: 'moz-left' }}>
+    <View style={globalStyles.default}>
       <Text>September Activities</Text>
       <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
       <Button title="Go back" onPress={() => navigation.goBack()} />
@@ -112,7 +114,7 @@ function Sep_month({ route, navigation }) {
 
 function Oct_month({ route, navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: 'moz-left', justifyContent: 'moz-left' }}>
+    <View style={globalStyles.default}>
       <Text>October Activities</Text>
       <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
       <Button title="Go back" onPress={() => navigation.goBack()} />
@@ -122,7 +124,7 @@ function Oct_month({ route, navigation }) {
 
 function Nov_month({ route, navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: 'moz-left', justifyContent: 'moz-left' }}>
+    <View style={globalStyles.default}>
       <Text>November Activities</Text>
       <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
       <Button title="Go back" onPress={() => navigation.goBack()} />
@@ -132,7 +134,7 @@ function Nov_month({ route, navigation }) {
 
 function Dec_month({ route, navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: 'moz-left', justifyContent: 'moz-left' }}>
+    <View style={globalStyles.default}>
       <Text>December Activities</Text>
       <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
       <Button title="Go back" onPress={() => navigation.goBack()} />
@@ -144,7 +146,7 @@ function ActivitiesScreen({ route, navigation }) {
   /* 2. Get the param */
   // const { itemId, otherParam } = route.params;
   return (
-    <View style={{ flex: 1, alignItems: 'moz-left', justifyContent: 'moz-left' }}>
+    <View style={globalStyles.default}>
       <Text>Details Screen</Text>
       {/* <Text>itemId: {JSON.stringify(itemId)}</Text>
       <Text>otherParam: {JSON.stringify(otherParam)}</Text>
@@ -168,9 +170,16 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Overview' }} />
+      <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Overview' }, ({ navigation }) => ({ headerRight: () => (
+        <Header navigation={navigation}/>
+    )
+})
+} />
       {/* <Stack.Screen name="Home"> {props => <HomeScreen {...props} extraData={someData} />} </Stack.Screen> */}
-      <Stack.Screen name="Monthly Activities" component={MonthsScreen} />
+      <Stack.Screen name="My Account" component={Account} />
+      <Stack.Screen name="Create Event" component={CreateEvent} />
+
+      <Stack.Screen name="Month" component={MonthsScreen} />
       <Stack.Screen name="Listed Activities" component={ActivitiesScreen} />
       <Stack.Screen name="January Activities" component={Jan_month} />
       <Stack.Screen name="Skiing Trip" component={ski_trip} />

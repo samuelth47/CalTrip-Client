@@ -3,8 +3,26 @@ import {StyleSheet} from 'react-native';
 export const globalStyles = StyleSheet.create({
     default: {
         flex: 1, 
-        alignItems: 'moz-left', 
-        justifyContent: 'moz-left'
+        alignItems: 'center', 
+        justifyContent: 'flex-start'
+    },
+    month: {
+      flex: 1,
+      alignItems: 'flex-start',
+      justifyContent: 'flex-end',
+    },
+    buttonv: {
+      padding: 20,
+      // paddingBottom: 10,
+      paddingTop: 700,
+      flex: 1,
+      // alignItems: 'flex-start',
+      justifyContent: 'center',
+      // width: '50%',
+    },
+    button: {
+      fontSize: 2,
+      justifyContent: 'flex-end',
     },
     container: {
       flex: 1,
@@ -16,7 +34,7 @@ export const globalStyles = StyleSheet.create({
       position: 'absolute',
       width: '100%', 
       height: '30%',
-      alignItems: 'start',
+      alignItems: 'flex-start',
       top: 0,
     },
     eventTitle: {
@@ -39,5 +57,10 @@ export const globalStyles = StyleSheet.create({
         padding: 30,
         position: 'absolute',
         top: '50%',
+    },
+    account: {
+      flex: 1, 
+        alignItems: 'center', 
+        justifyContent: 'flex-start'
     },
   });
