@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { Image, StyleSheet, Button, View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack'; 
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { globalStyles } from './styles/global';
 import HomeScreen from "./screens/home";
 import MonthsScreen from "./screens/months";
-import Jan_month from "./screens/january"; 
+import Jan_month from "./screens/january";
 import Header from "./shared/header";
 import Account from './screens/account';
-import CreateEvent from './screens/create';
+import CreateEvent from './screens/create_event';
 
 function ski_trip({ navigation }) {
   return (
