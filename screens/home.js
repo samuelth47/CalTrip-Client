@@ -11,7 +11,7 @@ export default function HomeScreen({ navigation }) {
           <Button
             title="Month"
             onPress={() => {
-              //  1. Navigate to the Details route with params 
+              //  1. Navigate to the Details route with params
               navigation.navigate('Month', {});
             }}
         />
@@ -20,7 +20,7 @@ export default function HomeScreen({ navigation }) {
           <Button
             title="Create Event"
             onPress={() => {
-              //  1. Navigate to the Details route with params 
+              //  1. Navigate to the Details route with params
               navigation.navigate('Create Event', {});
             }}
           />

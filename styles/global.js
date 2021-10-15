@@ -2,8 +2,8 @@ import {StyleSheet} from 'react-native';
 
 export const globalStyles = StyleSheet.create({
     default: {
-        flex: 1, 
-        alignItems: 'center', 
+        flex: 1,
+        alignItems: 'center',
         justifyContent: 'flex-start'
     },
     month: {
@@ -32,7 +32,7 @@ export const globalStyles = StyleSheet.create({
     },
     act_pic: {
       position: 'absolute',
-      width: '100%', 
+      width: '100%',
       height: '30%',
       alignItems: 'flex-start',
       top: 0,
@@ -59,8 +59,13 @@ export const globalStyles = StyleSheet.create({
         top: '50%',
     },
     account: {
-      flex: 1, 
-        alignItems: 'center', 
+      flex: 1,
+        alignItems: 'center',
         justifyContent: 'flex-start'
+    },
+    inputBox: {
+      borderWidth: 1,
+      borderRadius: 5,
+      padding: 5,
     },
   });
