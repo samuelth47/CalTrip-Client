@@ -28,15 +28,16 @@ export const globalStyles = StyleSheet.create({
     // wrapper for both "month" and "+" buttons
     wrapper: {
       padding: 20,
-      justifyContent: 'flex-end',
+      // position: 'absolute',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
       alignItems: 'flex-end'
     },
 
     // month button
     buttonv: {
-      paddingBottom: 20,
-      // paddingBottom: 10,
-      // paddingTop: 700,
+      paddingVertical: 5,
+      paddingHorizontal: 20,
       flex: 1,
       // alignItems: 'flex-start',
       justifyContent: 'center',
@@ -45,17 +46,18 @@ export const globalStyles = StyleSheet.create({
 
     // text style of +
     plus: {
-      fontSize: 50,
+      fontSize: 40,
       color: '#C0C0C0',
     },
 
     // style for + button
     plusButton: {
+      // bottom: 20,
       width: 50,
       height: 50,
       // backgroundColor: '#FFF',
       borderRadius: 60,
-      justifyContent: 'flex-end',
+      justifyContent: 'center',
       alignItems: 'center',
       borderColor: '#C0C0C0',
       borderWidth: 1,
