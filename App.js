@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { Image, StyleSheet, Button, View, Text } from 'react-native';
+import { Image, Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { globalStyles } from './styles/global';
 import HomeScreen from "./screens/home";
+import LoginScreen from "./screens/login";
 import MonthsScreen from "./screens/months";
 import Jan_month from "./screens/january";
 import Header from "./shared/header";
@@ -169,13 +170,14 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Overview' }, ({ navigation }) => ({ headerRight: () => (
+      <Stack.Navigator initialRouteName="Login">
+      <Stack.Screen name="Login" component={LoginScreen} options={{ title: 'Overview' }, ({ navigation }) => ({ headerRight: () => (
         <Header navigation={navigation}/>
     )
 })
 } />
       {/* <Stack.Screen name="Home"> {props => <HomeScreen {...props} extraData={someData} />} </Stack.Screen> */}
+      <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="My Account" component={Account} />
       <Stack.Screen name="Create Event" component={CreateEvent} />
 

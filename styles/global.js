@@ -24,6 +24,13 @@ export const globalStyles = StyleSheet.create({
       fontSize: 2,
       justifyContent: 'flex-end',
     },
+    login_button: {
+      width: '200px',
+      height: '50',
+      marginBottom: 100,
+      // backgroundColor: '#8C2131',
+
+    },
     container: {
       flex: 1,
       backgroundColor: '#fff',
@@ -68,4 +75,9 @@ export const globalStyles = StyleSheet.create({
       borderRadius: 5,
       padding: 5,
     },
+    logo: {
+      width: "100%",
+      height: "10%",
+      marginBottom: 300,
+    }
   });
