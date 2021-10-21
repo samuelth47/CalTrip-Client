@@ -4,28 +4,25 @@ import { globalStyles } from '../styles/global';
 
 export default function HomeScreen({ navigation }) {
     return (
-      <View style= {globalStyles.default}>
-        <Text>This is where the events go.</Text>
-        <View style = {{flexDirection: 'row'}}>
-        <View style={globalStyles.buttonv}>
-          <Button
-            title="Month"
-            onPress={() => {
-              //  1. Navigate to the Details route with params
-              navigation.navigate('Month', {});
-            }}
-        />
+      <View style= {globalStyles.homepage}>
+        <Text style= {globalStyles.intro}>This is where the events go.</Text>
+
+        <View style = {globalStyles.wrapper}>
+          <View style={globalStyles.buttonv}>
+            <Button
+              title="Month"
+              onPress={() => {
+                //  1. Navigate to the Details route with params
+                navigation.navigate('Month', {});
+              }}/>
+            </View>
+
+            <TouchableOpacity onPress={() => navigation.navigate('Create Event', {})}>
+              <View style={globalStyles.plusButton}>
+               <Text style={globalStyles.plus}>+</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
         </View>
-        <View style={globalStyles.buttonv}>
-          <Button
-            title="Create Event"
-            onPress={() => {
-              //  1. Navigate to the Details route with params
-              navigation.navigate('Create Event', {});
-            }}
-          />
-        </View>
-      </View>
-      </View>
     );
   }

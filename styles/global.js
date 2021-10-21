@@ -4,6 +4,7 @@ export const globalStyles = StyleSheet.create({
     default: {
         flex: 1,
         alignItems: 'center',
+        textAlign: 'center',
         justifyContent: 'flex-start'
     },
     month: {
@@ -11,18 +12,55 @@ export const globalStyles = StyleSheet.create({
       alignItems: 'flex-start',
       justifyContent: 'flex-end',
     },
-    buttonv: {
+    // container for the homepage
+    homepage: {
+      flex: 1,
+      backgroundColor: '#fff',
+    },
+
+    // where the events go
+    intro: {
+      flex: 1,
+      textAlign: 'center',
+      justifyContent: 'flex-start'
+    },
+
+    // wrapper for both "month" and "+" buttons
+    wrapper: {
       padding: 20,
-      // paddingBottom: 10,
-      paddingTop: 700,
+      // position: 'absolute',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'flex-end'
+    },
+
+    // month button
+    buttonv: {
+      paddingVertical: 5,
+      paddingHorizontal: 20,
       flex: 1,
       // alignItems: 'flex-start',
       justifyContent: 'center',
       // width: '50%',
     },
-    button: {
-      fontSize: 2,
-      justifyContent: 'flex-end',
+
+    // text style of +
+    plus: {
+      fontSize: 40,
+      color: '#C0C0C0',
+    },
+
+    // style for + button
+    plusButton: {
+      // bottom: 20,
+      width: 50,
+      height: 50,
+      // backgroundColor: '#FFF',
+      borderRadius: 60,
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderColor: '#C0C0C0',
+      borderWidth: 1,
     },
     login_button: {
       width: '200px',
