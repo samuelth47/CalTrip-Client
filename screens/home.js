@@ -9,6 +9,12 @@ export default function HomeScreen({ navigation }) {
 
         <View style = {globalStyles.wrapper}>
           <View style={globalStyles.buttonv}>
+          <Button
+            title="Join Event (tester)"
+            onPress={() => {
+              //  1. Navigate to the Details route with params
+              navigation.navigate('Join Event', {});
+            }}/>
             <Button
               title="Month"
               onPress={() => {
