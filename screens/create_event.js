@@ -4,6 +4,8 @@ import { globalStyles } from '../styles/global';
 
 export default function CreateEvent() {
     return (
+      <View style = {globalStyles.contentContainer}>
+
         <View style={globalStyles.default}>
             <Text>Create Event</Text>
             <Text>Title</Text>
@@ -30,6 +32,7 @@ export default function CreateEvent() {
             <TextInput style={globalStyles.inputBox}
               placeholder = "Introduce the details of the event..."
             />
+      </View>
             <Button
               title="Create Event"
               onPress={() => {

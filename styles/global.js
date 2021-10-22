@@ -16,17 +16,18 @@ export const globalStyles = StyleSheet.create({
     homepage: {
       flex: 1,
       backgroundColor: '#fff',
+      width: "100%",
+      flexDirection: "column",
     },
 
     // where the events go
     intro: {
-      flex: 1,
       textAlign: 'center',
       justifyContent: 'flex-start'
     },
 
     // wrapper for both "month" and "+" buttons
-    wrapper: {
+      wrapper: {
       padding: 20,
       // position: 'absolute',
       flexDirection: 'row',
@@ -117,5 +118,42 @@ export const globalStyles = StyleSheet.create({
       width: "100%",
       height: "10%",
       marginBottom: 300,
-    }
+    },
+
+    eventsListImageBackground: {
+      resizeMode: "stretch",
+      height: 100,
+      justifyContent: "center",
+    },
+
+    eventContainer: {
+      flex: 1,
+    },
+    textInsideContainer: {
+      color: "white",
+      fontSize: 42,
+      lineHeight: 20,
+      fontWeight: "bold",
+      textAlign: "center",
+      backgroundColor: "#E0E0E0",
+      opacity: 0.7,
+    },
+    //Event Description in view Event page
+    eventViewEventDescription: {
+      padding: 5,
+    },
+
+    eventViewTextContainer: {
+      textAlign: "left",
+    },
+
+    //Events Container in Events page
+    eventsViewEventsContainer: {
+      flex: 3,
+    },
+
+    //General Content Container
+    contentContainer: {
+      flex: 3,
+    },
   });
