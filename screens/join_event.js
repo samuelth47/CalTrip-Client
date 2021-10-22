@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import {View, Text, TextInput, Button, TouchableOpacity, Picker, StyleSheet } from 'react-native';
 import { globalStyles } from '../styles/global';
 
-export default function JoinEvent() {
+export default function JoinEvent( { navigation } ) {
     const [selectedValue, setSelectedValue] = useState("java");
 
     return (
+      <View style = {globalStyles.contentContainer}>
+
         <View style={globalStyles.default}>
             <Text>"Here goes title of the event"</Text>
             <Text>Join Event</Text>
@@ -40,7 +42,7 @@ export default function JoinEvent() {
             </Picker>
 
             <View style={globalStyles.buttonv}>
-
+          </View>
               <Button
                 title="Join Event"
                 onPress={() => {

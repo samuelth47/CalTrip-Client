@@ -11,6 +11,8 @@ import Header from "./shared/header";
 import Account from './screens/account';
 import CreateEvent from './screens/create_event';
 import JoinEvent from './screens/join_event';
+import ViewEvent from './screens/view_event';
+
 
 function ski_trip({ navigation }) {
   return (
@@ -185,7 +187,12 @@ export default function App() {
     )
 })
 } />
-      <Stack.Screen name="Join Event" component={JoinEvent} />
+      <Stack.Screen name="View Event" component={ViewEvent} />
+      <Stack.Screen name="Join Event" component={JoinEvent} options={{ title: 'Overview' }, ({ navigation }) => ({ headerRight: () => (
+        <Header navigation={navigation}/>
+      )
+      })
+      } />
 
       <Stack.Screen name="Month" component={MonthsScreen} options={{ title: 'Overview' }, ({ navigation }) => ({ headerRight: () => (
         <Header navigation={navigation}/>
