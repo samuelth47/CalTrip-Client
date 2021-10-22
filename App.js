@@ -170,19 +170,31 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
+      {/* The landing page will be the Login page */}
       <Stack.Navigator initialRouteName="Login">
-      <Stack.Screen name="Login" component={LoginScreen} options={{ title: 'Overview' }, ({ navigation }) => ({ headerRight: () => (
+      <Stack.Screen name="Login" component={LoginScreen} />
+      <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Overview' }, ({ navigation }) => ({ headerRight: () => (
         <Header navigation={navigation}/>
     )
 })
 } />
-      {/* <Stack.Screen name="Home"> {props => <HomeScreen {...props} extraData={someData} />} </Stack.Screen> */}
-      <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="My Account" component={Account} />
-      <Stack.Screen name="Create Event" component={CreateEvent} />
+      <Stack.Screen name="Create Event" component={CreateEvent} options={{ title: 'Overview' }, ({ navigation }) => ({ headerRight: () => (
+        <Header navigation={navigation}/>
+    )
+})
+} />
 
-      <Stack.Screen name="Month" component={MonthsScreen} />
-      <Stack.Screen name="Listed Activities" component={ActivitiesScreen} />
+      <Stack.Screen name="Month" component={MonthsScreen} options={{ title: 'Overview' }, ({ navigation }) => ({ headerRight: () => (
+        <Header navigation={navigation}/>
+    )
+})
+} />
+      <Stack.Screen name="Listed Activities" component={ActivitiesScreen} options={{ title: 'Overview' }, ({ navigation }) => ({ headerRight: () => (
+        <Header navigation={navigation}/>
+    )
+})
+} />
       <Stack.Screen name="January Activities" component={Jan_month} />
       <Stack.Screen name="Skiing Trip" component={ski_trip} />
       <Stack.Screen name="Give a Ride" component={Ride} />
