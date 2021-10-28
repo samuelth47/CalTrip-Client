@@ -116,7 +116,7 @@ export const globalStyles = StyleSheet.create({
     },
     logo: {
       width: "100%",
-      height: "10%",
+      height: "23%",
       marginBottom: 300,
     },
 
