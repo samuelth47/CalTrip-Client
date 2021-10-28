@@ -64,8 +64,8 @@ export const globalStyles = StyleSheet.create({
       borderWidth: 1,
     },
     login_button: {
-      width: '200px',
-      height: '50',
+      width: 200,
+      height: 50,
       marginBottom: 100,
       // backgroundColor: '#8C2131',
 
