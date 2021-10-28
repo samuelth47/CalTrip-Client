@@ -9,6 +9,7 @@ const test_image = { uri: "https://images.unsplash.com/photo-1551698618-1dfe5d97
       <View style = {globalStyles.homepage}>
         <View style = {globalStyles.eventsViewEventsContainer}>
           <TouchableOpacity onPress={() => navigation.navigate('View Event', {})}>
+
             <View style = {globalStyles.eventContainer}>
               <ImageBackground source={test_image}  style={globalStyles.eventsListImageBackground}>
                 <View style={globalStyles.textInsideContainer}>
