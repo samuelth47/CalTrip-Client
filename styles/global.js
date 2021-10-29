@@ -82,7 +82,7 @@ export const globalStyles = StyleSheet.create({
     marginBottom: '25%',
   },
   // __tried to set button style but couldn't get it to work
-  // __had to hard code it in 
+  // __had to hard code it in
   // login_button: {
   //   color: '#75022c',
   // },
