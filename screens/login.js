@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, Image, View, Button, Alert } from 'react-native';
+import { Text, Image, View, Button, Alert, TextInput } from 'react-native';
 import { globalStyles } from '../styles/global';
 
 
@@ -7,11 +7,10 @@ export default function LoginScreen({ navigation }) {
 
   return (
     <View style={globalStyles.container}>
-
       <Image source={{ uri: 'https://github.com/calvin-cs262-fall2021-teamC/CalTrip-project/blob/main/images/logos/Color%20logo%20-%20no%20background.png?raw=true' }} style={globalStyles.logo} />
       <Text style={globalStyles.slogan}>"We're going places."</Text>
-      <View style={globalStyles.login_button_location}>
 
+      <View style={globalStyles.login_button_location}>
         <Button
           color='#75022c'
           title="Login to continue"
