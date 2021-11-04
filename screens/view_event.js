@@ -24,9 +24,11 @@ export default function ViewEvent({ navigation }) {
           <Text style={globalStyles.eventViewEventDescription}><Text style={{ fontWeight: "bold" }}>Price: </Text>$30</Text>
         </View>
 
+      </View>
 
-        <View style={globalStyles.join_button}>
-        </View>
+
+
+      <View style={globalStyles.bottomWrapper}>
         <Button
           color='#75022c'
           title="Join Event"
@@ -35,6 +37,7 @@ export default function ViewEvent({ navigation }) {
             navigation.navigate('Join Event');
           }} />
       </View>
+
 
     </View>
 
