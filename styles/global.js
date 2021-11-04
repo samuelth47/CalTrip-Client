@@ -7,14 +7,17 @@ export const globalStyles = StyleSheet.create({
     textAlign: 'center',
     justifyContent: 'flex-start'
   },
+
   month_list: {
     paddingTop: 10,
   },
+
   month: {
     flex: 1,
     alignItems: 'flex-start',
     justifyContent: 'flex-end',
   },
+
   // container for the homepage
   homepage: {
     flex: 1,
@@ -64,6 +67,13 @@ export const globalStyles = StyleSheet.create({
     backgroundColor: '#75022c',
     borderRadius: 100,
   },
+
+  // Join event button
+  join_button: {
+    flex: 1,
+    justifyContent: 'flex-end',
+  },
+
   logo: {
     width: '100%',
     height: '25%',
@@ -81,11 +91,13 @@ export const globalStyles = StyleSheet.create({
     height: 50,
     marginBottom: '25%',
   },
+  
   // __tried to set button style but couldn't get it to work
   // __had to hard code it in
   // login_button: {
   //   color: '#75022c',
   // },
+
   container: {
     flex: 1,
     backgroundColor: '#fff',

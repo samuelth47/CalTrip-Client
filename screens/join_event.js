@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, TouchableOpacity, Picker, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Button, TouchableOpacity, Picker, StyleSheet, Alert } from 'react-native';
 import { globalStyles } from '../styles/global';
 
 export default function JoinEvent({ navigation }) {
@@ -42,18 +42,26 @@ export default function JoinEvent({ navigation }) {
           <Picker.Item label="11" value="11" />
         </Picker>
 
-        <View style={globalStyles.buttonv}>
-        </View>
+        <View style={globalStyles.join_button}>
         <Button
           color= '#75022c'
           title="Join Event"
           onPress={() => {
-            //  1. Navigate to the Details route with params
-            //navigation.navigate('Create event', {});
+            Alert.alert(
+              "Congratulations!",
+              "You successfully joined the trip.",
+              [
+                {
+                  text: "OK",
+                  onPress: () => { navigation.navigate('View Event'); }
+                }
+              ]
+            );
           }}
         />
       </View>
     </View>
+  </View>
 
   );
 }
