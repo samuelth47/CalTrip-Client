@@ -122,17 +122,42 @@ export const globalStyles = StyleSheet.create({
     top: '50%',
   },
   account: {
-    flex: 1,
+    // flexDirection: "column",
+    // alignContent: 'center'
+  },
+  accountInfo: {
     alignItems: 'center',
-    justifyContent: 'flex-start'
+    fontSize: "20px",
+  },
+  profileButton: {
+    borderWidth: 5,
+    borderColor: '#75022c',
+    alignItems: 'center',
+    justifyContent: '',
+    width: 150,
+    height: 150,
+    borderRadius: 100,
+    alignSelf: 'center',
+    backgroundImage: "url(" + "https://c1.wallpaperflare.com/preview/558/669/73/puppy-yorkshire-terrier-puppy-yorkie-puppy-pet.jpg" + ")",
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    marginTop: '5%',
+    marginBottom: '5%',
+
+  },
+  deleteAccountButton: {
+    borderColor: '#75022c',
+    backgroundColor: '#75022c',
+    justifyContent: 'center',
+    alignSelf: 'stretch',
+    marginTop: '100%'
   },
   inputBox: {
     borderWidth: 1,
     borderRadius: 5,
     padding: 5,
   },
-
-
   eventsListImageBackground: {
     resizeMode: 'stretch',
     height: 100,
@@ -171,4 +196,5 @@ export const globalStyles = StyleSheet.create({
     paddingVertical: '5%',
     paddingHorizontal: 20,
   },
+
 });
