@@ -25,7 +25,7 @@ export default function ViewEvent({ navigation }) {
         </View>
 
 
-        <View style={globalStyles.buttonv}>
+        <View style={globalStyles.join_button}>
         </View>
         <Button
           color='#75022c'

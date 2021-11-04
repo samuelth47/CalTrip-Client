@@ -1,8 +1,8 @@
 import React from 'react';
-import { View, Text, TextInput, Button, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, Button, TouchableOpacity, Alert } from 'react-native';
 import { globalStyles } from '../styles/global';
 
-export default function CreateEvent() {
+export default function CreateEvent({ navigation }) {
   return (
     <View style={globalStyles.contentContainer}>
 
@@ -38,8 +38,16 @@ export default function CreateEvent() {
         color='#75022c'
         title="Create Event"
         onPress={() => {
-          //  1. Navigate to the Details route with params
-          //navigation.navigate('Create event', {});
+            Alert.alert(
+              "Congratulations!",
+              "You successfully created the trip.",
+              [
+                {
+                  text: "OK",
+                  onPress: () => { navigation.navigate('Home'); }
+                }
+              ]
+            );
         }}
       />
     </View>
