@@ -7,7 +7,6 @@ export default function JoinEvent({ navigation }) {
 
   return (
     <View style={globalStyles.contentContainer}>
-
       <View style={globalStyles.default}>
         <Text>"Here goes title of the event"</Text>
         <Text>Join Event</Text>

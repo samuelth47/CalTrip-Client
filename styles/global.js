@@ -2,22 +2,19 @@ import { StyleSheet } from 'react-native';
 
 export const globalStyles = StyleSheet.create({
   default: {
-    flex: 1,
+    flex: 10,
     alignItems: 'center',
     textAlign: 'center',
     justifyContent: 'flex-start'
   },
-
   month_list: {
     paddingTop: 10,
   },
-
   month: {
     flex: 1,
     alignItems: 'flex-start',
     justifyContent: 'flex-end',
   },
-
   // container for the homepage
   homepage: {
     flex: 1,
@@ -34,6 +31,7 @@ export const globalStyles = StyleSheet.create({
 
   // wrapper for both "month" and "+" buttons
   wrapper: {
+    flex: 1,
     padding: 20,
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -67,13 +65,6 @@ export const globalStyles = StyleSheet.create({
     backgroundColor: '#75022c',
     borderRadius: 100,
   },
-
-  // Join event button
-  join_button: {
-    flex: 1,
-    justifyContent: 'flex-end',
-  },
-
   logo: {
     width: '100%',
     height: '25%',
@@ -91,13 +82,11 @@ export const globalStyles = StyleSheet.create({
     height: 50,
     marginBottom: '25%',
   },
-  
   // __tried to set button style but couldn't get it to work
   // __had to hard code it in
   // login_button: {
   //   color: '#75022c',
   // },
-
   container: {
     flex: 1,
     backgroundColor: '#fff',
@@ -134,17 +123,19 @@ export const globalStyles = StyleSheet.create({
     top: '50%',
   },
   account: {
-    flex: 1,
+    // flexDirection: "column",
+    // alignContent: 'center'
+  },
+  accountInfo: {
     alignItems: 'center',
-    justifyContent: 'flex-start'
+    fontSize: 20,
   },
+
   inputBox: {
-    borderWidth: 1,
-    borderRadius: 5,
-    padding: 5,
+    marginVertical: 5,
+    borderBottomColor: "#75022c",
+    borderBottomWidth: 1,
   },
-
-
   eventsListImageBackground: {
     resizeMode: 'stretch',
     height: 100,
@@ -179,8 +170,35 @@ export const globalStyles = StyleSheet.create({
 
   //General Content Container
   contentContainer: {
-    flex: 3,
+    flex: 1,
     paddingVertical: '5%',
     paddingHorizontal: 20,
+  },
+
+  bottomWrapper: {
+    flex: 1,
+    paddingHorizontal: 20,
+    paddingTop: 30,
+  },
+
+  createEventInputBox: {
+    width: "100%",
+    margin: 5,
+    paddingHorizontal: 3,
+  },
+
+  createEventContentContainer: {
+    flex: 10,
+    textAlign: 'center',
+  },
+
+  title: {
+    fontWeight: "bold",
+    fontSize: 32,
+    paddingBottom: 20,
+  },
+
+  subTitle: {
+    fontWeight: "bold",
   },
 });
