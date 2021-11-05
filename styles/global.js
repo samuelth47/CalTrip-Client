@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export const globalStyles = StyleSheet.create({
   default: {
-    flex: 10,
+    flex: 1,
     alignItems: 'center',
     textAlign: 'center',
     justifyContent: 'flex-start'
@@ -31,7 +31,6 @@ export const globalStyles = StyleSheet.create({
 
   // wrapper for both "month" and "+" buttons
   wrapper: {
-    flex: 1,
     padding: 20,
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -128,13 +127,36 @@ export const globalStyles = StyleSheet.create({
   },
   accountInfo: {
     alignItems: 'center',
-    fontSize: 20,
+    fontSize: "20px",
   },
+  profileButton: {
+    borderWidth: 5,
+    borderColor: '#75022c',
+    alignItems: 'center',
+    justifyContent: '',
+    width: 150,
+    height: 150,
+    borderRadius: 100,
+    alignSelf: 'center',
+    // backgroundImage: "url(" + "https://c1.wallpaperflare.com/preview/558/669/73/puppy-yorkshire-terrier-puppy-yorkie-puppy-pet.jpg" + ")",
+    // backgroundPosition: 'center',
+    // backgroundSize: 'cover',
+    // backgroundRepeat: 'no-repeat',
+    marginTop: '5%',
+    marginBottom: '5%',
 
+  },
+  deleteAccountButton: {
+    borderColor: '#75022c',
+    backgroundColor: '#75022c',
+    justifyContent: 'center',
+    alignSelf: 'stretch',
+    marginTop: '100%'
+  },
   inputBox: {
-    marginVertical: 5,
-    borderBottomColor: "#75022c",
-    borderBottomWidth: 1,
+    borderWidth: 1,
+    borderRadius: 5,
+    padding: 5,
   },
   eventsListImageBackground: {
     resizeMode: 'stretch',
@@ -170,35 +192,9 @@ export const globalStyles = StyleSheet.create({
 
   //General Content Container
   contentContainer: {
-    flex: 1,
+    flex: 3,
     paddingVertical: '5%',
     paddingHorizontal: 20,
   },
 
-  bottomWrapper: {
-    flex: 1,
-    paddingHorizontal: 20,
-    paddingTop: 30,
-  },
-
-  createEventInputBox: {
-    width: "100%",
-    margin: 5,
-    paddingHorizontal: 3,
-  },
-
-  createEventContentContainer: {
-    flex: 10,
-    textAlign: 'center',
-  },
-
-  title: {
-    fontWeight: "bold",
-    fontSize: 32,
-    paddingBottom: 20,
-  },
-
-  subTitle: {
-    fontWeight: "bold",
-  },
 });

@@ -1,16 +1,29 @@
 import React from 'react';
-import { View, Button, Text } from 'react-native';
+import { Image, View, Button, Text } from 'react-native';
 import { globalStyles } from '../styles/global';
 
 export default function Account({ route, navigation }) {
-  /* 2. Get the param */
-  // const { itemId, otherParam } = route.params;
+
   return (
     <View style={globalStyles.account}>
-      {/* <Button title="Profile" onPress={() => navigation.navigate('January Activities')} />
-        <Button title="History" onPress={() => navigation.navigate('February Activities')} />
-        <Button title="Help" onPress={() => navigation.navigate('March Activities')} /> */}
-      <Text>This is about my Account.</Text>
+        <View style={globalStyles.profileButton}>
+          <Button
+            color='#ffffff00'
+            title=""/>
+        </View>
+        
+
+        <View style={globalStyles.accountInfo}>
+          <Text style={globalStyles.accountInfo}>John Smith</Text>
+          <Text style={globalStyles.accountInfo}>js@students.calvin.edu</Text>
+          <Text style={globalStyles.accountInfo}>123-456-7891</Text>
+        </View>
+        
+        <View style={globalStyles.deleteAccountButton}>
+          <Button
+            color='#75022c'
+            title="Delete Account"/>
+        </View>
     </View>
   );
 }
