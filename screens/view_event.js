@@ -26,8 +26,6 @@ export default function ViewEvent({ navigation }) {
 
       </View>
 
-
-
       <View style={globalStyles.bottomWrapper}>
         <Button
           color='#75022c'

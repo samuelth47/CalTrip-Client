@@ -38,7 +38,7 @@ export const globalStyles = StyleSheet.create({
   },
 
   // month button
-  buttonv: {
+  month_button: {
     paddingVertical: 5,
     paddingHorizontal: 20,
     flex: 1,

@@ -16,9 +16,8 @@ export default function HomeScreen({ navigation }) {
         </TouchableOpacity>
       </View>
 
-
       <View style={globalStyles.wrapper}>
-        <View style={globalStyles.buttonv}>
+        <View style={globalStyles.month_button}>
           <Button
             color='#75022c'
             title="Month"
